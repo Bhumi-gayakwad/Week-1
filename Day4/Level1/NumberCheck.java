@@ -1,0 +1,39 @@
+
+import java.util.Scanner;
+
+public class NumberCheck {
+    public static void main(String[] args) {
+        // Create a Scanner object for user input
+        Scanner scanner = new Scanner(System.in);
+
+        // Prompt the user to input a number
+        System.out.print("Enter an integer: ");
+        int number = scanner.nextInt();
+
+        // Call the method to check the number and store the result
+        int result = checkNumber(number);
+
+        // Display the appropriate message based on the result
+        if (result == 1) {
+            System.out.println("The number is positive.");
+        } else if (result == -1) {
+            System.out.println("The number is negative.");
+        } else {
+            System.out.println("The number is zero.");
+        }
+
+      
+    }
+
+    // Method to check if a number is positive, negative, or zero
+    public static int checkNumber(int number) {
+        if (number > 0) {
+            return 1; // Positive number
+        } else if (number < 0) {
+            return -1; // Negative number
+        } else {
+            return 0; // Zero
+        }
+    }
+}
+ 
